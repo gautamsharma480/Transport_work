@@ -5,17 +5,17 @@ from matplotlib import re
 # Fig. 1b (Selection function vs mu plot) from Applied Physics Reviews 5, 021303 (2018); doi: 10.1063/1.5021094
 kB = 1.38e-23 # J/K
 eV = 1.60218e-19 #J
-def cb(x):
+def cb(x): # Not used
     Ecb = [2*i**2 + 2 for i in x]
     return Ecb
-def vb(x):
+def vb(x):   # Not used
     Evb = [-2*i**2 - 2 for i in x]
     return Evb
-def seebeck(Ef,E,T):
+def seebeck(Ef,E,T):  # Not used
     S = [(i-Ef)/kB*T for i in E]
     return S
 
-def FD(E,Ef,T):
+def FD(E,Ef,T):   # Not used
     f = 1/((np.exp(E-Ef)/kB*T) -1)
     return f
 
