@@ -31,19 +31,19 @@ mu=np.arange(-0.5,0.5,0.01)
 Ef = 0.0
 
 def plot_mu_dfde(): # plots selection function for T=300,400,500 K.
-    Seeb_300=[]
-    Seeb_400=[]
-    Seeb_500=[]
+    SF_300=[] # Selection Function = SF
+    SF_400=[]
+    SF_500=[]
     for i in mu:
         y_300 = (i - Ef) * dfde(i, Ef,300)
         y_400 = (i - Ef) * dfde(i, Ef, 400)
         y_500 = (i - Ef) * dfde(i, Ef, 500)
-        Seeb_300.append(y_300)
-        Seeb_400.append(y_400)
-        Seeb_500.append(y_500)
-    plt.plot(mu,Seeb_300,marker='s',label='T = 300 K')
-    plt.plot(mu,Seeb_400, marker = 'o',label='T = 400 K')
-    plt.plot(mu,Seeb_500, marker = 'p',label='T = 500 K')
+        SF_300.append(y_300)
+        SF_400.append(y_400)
+        SF_500.append(y_500)
+    plt.plot(mu,SF_300,marker='s',label='T = 300 K')
+    plt.plot(mu,SF_400, marker = 'o',label='T = 400 K')
+    plt.plot(mu,SF_500, marker = 'p',label='T = 500 K')
     plt.axvline(x=0)
     plt.axhline(y=0)
     plt.xlabel(r'$\mu$ (eV)', fontsize=16)
