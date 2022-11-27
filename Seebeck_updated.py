@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from matplotlib import re
 kB = 1.38e-23 # J/K
 eV = 1.60218e-19 #J
+# This script generates the typical behaviour of Seebeck Coefficient. 
+# Fig. 1b (Selection function vs mu plot) from Applied Physics Reviews 5, 021303 (2018); doi: 10.1063/1.5021094
 def cb(x): # Not used
     Ecb = [2*i**2 + 2 for i in x]
     return Ecb
